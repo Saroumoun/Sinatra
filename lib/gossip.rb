@@ -21,7 +21,13 @@ class Gossip
 	  end
 	  return all_gossips
 	end
+
+	def self.find(id)
+		Gossip.all[id.to_i-1]
+	end
 end 
+
+test = Gossip.find(3)
 
 # mon_test = Gossip.new
 # mon_test.save

@@ -4,15 +4,15 @@
   </head>
   <body>
     <h1>Bienvenue sur Gossip.com !!</h1>
-    <p> La liste des potins arrive bientôt </p>
-    <a href="/gossips/new/">Cliquer ici pour créer un nouveau potin</a>
+   	<p><a href="/gossip/new/">Clique ici</a> si tu veux créer un nouveau gossip</p>
+    
+   	<h2> Liste des potins :</h2>
+    <% gossips.each_with_index do |gossip, i| %>
 
-    <% gossips.each do |gossip| %>
-        <p>
-          <%= gossip.author %><br/>
-          <%= gossip.content %>
-        </p>
-      <% end %>
+		
+    	<p><a href="/gossips/<%= i + 1 %>">Potin n°<%= i + 1 %></a></p>
+
+    <% end %>
 
   </body>
 </html>
