@@ -6,5 +6,13 @@
     <h1>Bienvenue sur Gossip.com !!</h1>
     <p> La liste des potins arrive bientôt </p>
     <a href="/gossips/new/">Cliquer ici pour créer un nouveau potin</a>
+
+    <% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+        </p>
+      <% end %>
+
   </body>
 </html>
