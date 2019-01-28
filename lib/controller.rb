@@ -18,4 +18,9 @@ class ApplicationController < Sinatra::Base
 		erb :show_gossip, locals: {gossip: Gossip.find(params[:id]), id_gossip: params[:id]}
 	end
 
+
+	get '/gossip/edit/:id' do
+		erb :edit, locals: {num_id: params[:id]}
+	end
+
 end
